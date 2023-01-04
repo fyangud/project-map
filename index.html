@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Fan Yang Portfolio</title>
+
+    <link rel="stylesheet" href="../src/style.css" type="text/css" media="screen">
+
+    <style>
+        /*project locations*/               
+        #am1 { left: 39.01%; top: 47.99%; } /*Changzhou*/
+        #am2 { left: 38.65%; top: 47.3%; }  /*Nanjing*/
+        #am3 { left: 38.2%; top: 46.1%; }   /*Xuzhou*/
+        #am4 { left: 68%; top: 43.8%; }     /*Berkeley*/
+        #am5 { left: 39.62%; top: 47.99%; } /*Shanghai*/
+        #am6 { left: 38.15%; top: 42.6%; }  /*Beijing*/
+        #am7 { left: 80.15%; top: 39.95%; } /*Boston*/
+
+        #cp1 { left: 17%; top: 34.8%; }     /*Chernobyl*/
+        #cp2 { left: 27.5%; top: 53.5%; }   /*Mumbai*/
+        #cp3 { left: 36.5%; top: 45.7%; }   /*Zhengzhou*/
+        #cp4 { left: 38.4%; top: 48.2%; }   /*Kunshan*/
+
+        #ac1 { left: 37.8%; top: 45.5%; }   /*Xuzhou*/
+        #ac2 { left: 39.32%; top: 47.2%; }  /*Changzhou*/
+        #ac3 { left: 67.6%; top: 43.1%; }   /*Petaluma*/
+        #ac4 { left: 37.8%; top: 52.1%; }   /*Dongguan*/
+        #ac5 { left: 9.5%; top: 34.3%; }    /*London*/
+
+        #pf1 { left: 73.9%; top: 47.9%; }   /*Austin*/
+        #pf2 { left: 40.45%; top: 39.85%; } /*Changchun*/
+        #pf3 { left: 34.8%; top: 51.55%; }  /* Yuxi */
+        #pf4 { left: 36.2%; top: 55.6%; }   /*Quang Ngai*/
+        #pf5 { left: 74.5%; top: 45.5%; }   /* Bentonville */
+        #pf6 { left: 34.6%; top: 44.5%; }   /* Xining */
+        #pf7 { left: 19%; top: 59.5%; }     /* Addis Ababa */
+    </style>
+   
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-3P8DD5RBES"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-3P8DD5RBES');
+    </script>
+
+</head>
+
+<body>
+    <div class="loadingScreen">
+        <svg width="100%" height="100%" style="position:absolute">
+            <rect width="100%" height="100%" style="fill:rgb(80,80,80);" />
+        </svg>
+        <object data="/images/Portfolio Logo.svg" id="loadingLogo"></object>
+    </div>
+
+    <!--点击进入页面-->
+    <script>
+        var loadingEl=document.getElementsByClassName("loadingScreen");
+        if(loadingEl[0]){
+            //console.log(loadingEl[0]);
+            loadingEl[0].addEventListener("click", function(){
+                loadingEl[0].setAttribute("style","visibility:hidden;opacity: 0;transition:0.5s;");
+            });
+        }
+        var timer;
+        timer=setTimeout(function () {
+            loadingEl[0].setAttribute("style","visibility:hidden;opacity: 0;transition:0.5s;");
+        }, 3000);            //3s后自动进入页面
+        function stop(){
+            clearTimeout(timer);
+        }
+    </script>
+
+    <div id="logoFilter">
+        <object data="/images/Portfolio Logo.svg" id="logo" ></object>
+        <!--筛选按钮-->
+        <div id="filterBtn">
+            <button class="Btn">Academic</button>
+            <button class="Btn">Competition</button>
+            <button class="Btn">Professional</button>
+            <button class="Btn">About Me</button>
+        </div>
+    </div>
+
+
+    <div id="container">
+        <!--加载background map-->
+		<object class="Map" data="/images/Worldmap-01.svg" type="image/svg+xml">
+			<embed class="Map" src="Worldmap-01.svg" type="image/svg+xml">
+		</object>
+        <object class="Map" data="/images/Worldmap Light-01.png" style="opacity:1;" >
+			<embed class="Map" src="Worldmap Light-01.png">
+		</object>
+
+        <div id="projects">
+        <!--自我介绍组-->
+        <ul id="aboutme">
+            <li  id="am1">
+                <div class="Content">
+                    <h2>Hometown: Changzhou, China</h2>
+                    <div class = 'Details' hidden><p>fyang652@gmail.com<br><a href="https://www.linkedin.com/in/fan-yang-013836164/">LinkedIn Profile</a></p>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="am2">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/SEU.jpg"></img>
+                    <h2>Bachelor of Science in Applied Physics</h2>
+                    <p>Southeast University<br>2010/09-2014/06</p>
+                    <div class = 'Details' hidden><p>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="am3">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/CUMT.jpg"></img>
+                    <h2>Master of Engineering in Urban Planning and Design</h2>
+                    <p>China University of Mining and Technology<br>2014/09-2017/06</p>
+                    <div class = 'Details' hidden><p>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="am4">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/UCB.jpg"></img>
+                    <h2>Master of Urban Design</h2>
+                    <p>University of California, Berkeley<br>2017/08-2018/08</p>
+                    <div class = 'Details' hidden><p>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="am5">
+                <div class="Content">
+                    <h2>Assistant Designer Internship</h2>
+                    <p>Dplus Architecture Studio, Shanghai<br>2016/07-2016/09</p>
+                    <div class = 'Details' hidden><p>Deeply involved in the schematic design and design development phases of varies commercial / public projects, including Moganshan SPA Hotel, Suzhou Elementary School, Shanghai Yide Area Urban Design, Xi'an Art City, etc. Role responsibilities include architecture / urban design form research, modelling refinement, analytical diagram production, rendering production.
+                    </p></div>
+                </div>
+            </li>
+            <li  id="am6">
+                <div class="Content">
+                    <h2>Assistant Designer Internship</h2>
+                    <p>China architecture design & research group, Beijing<br>2017/05-2017/07</p>
+                    <div class = 'Details' hidden><p>Worked in Cui Kai Studio under CADG. Took part in the schematic design and design development phase of varies architecture projects with public program, including Weihai Teenager Activity Center, Jinan Metro Headquarter, Hainan Culture Center, etc.
+                    </p></div>
+                </div>
+            </li>
+            <li  id="am7">
+                <div class="Content">
+                    <h2>Urban Designer</h2>
+                    <p>Sasaki Associates, Boston<br>Since 2018/11</p>
+                    <div class = 'Details' hidden><p>
+                    </p></div>
+                </div>
+            </li>
+        </ul>
+
+        
+        <!--工作作品组-->
+        <ul id="professional">
+            <li  id="pf1">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201905 Velocity Crossing/Headphoto.jpg"></img>
+                    <h2>Velocity Crossing</h2>
+                    <p>2019/05-2020/05 Austin, TX</p>
+                    <div class = 'Details' hidden>
+                    <p><small>Professional project @Sasaki<br>Team：Martin Zogran, Hernan D. Schlosman, Ethan Lay-Sleeper, Jeffrey Levy, Fan Yang<br><br>Design Area: 1450,000 ㎡<br>Program：Residential / Office / Retail<br>GFA：497,000 ㎡</small>
+                    <br><br>A significant mixed-use project in southeast Austin that’s already attracted an international large manufacturer and an H-E-B grocery store is growing in size, scope and land that will be preserved.
+                    <br><br><img width='100%' src='/images/201905 Velocity Crossing/P1.jpg'></img>
+                    <br><br>Inspired by the runways of the airport, Sasaki propose ‘runway parks’ form a major axis within the project. The runway parks are carefully positioned to provide access from the center of the project, directly to the existing open space, aiming to forms unique central space at the intersection, thus establishes a distinctive district identity. 
+                    <br><br>Breaking ground in early 2021 will be a 295-unit apartment complex called Presidium Velocity, followed shortly thereafter by 140,000 square feet of amenity space and creative office – featuring office space designed for incubating small businesses and creative types, restaurants, and health and wellness users.
+                    <br><br><div style='padding-bottom: 56.25%; position: relative'><iframe frameborder = '0' style = 'position: absolute; width: 100%; height: 100%' src="https://player.vimeo.com/video/438196864?&amp;title=0&amp;byline=0&amp;portrait=0"></iframe></div>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="pf2">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/202104 Changchun/Headphoto.jpg"></img>
+                    <h2>Changchun Middle Mountain Masterplan</h2>
+                    <p>2021/01-2021/04 Changchun, China</p>
+                    <div class = 'Details' hidden><p><small>Professional project @Sasaki<br>Team：Ming-Jen Hsueh, Tianjiao Zhang, Muhan Cui, Binbin Ma, Wenxin Li, Fan Yang, Yixing Miao, Boxiang Yu, Fangli Zhang, Zixuan Tai, Andrew Sell<br><br>Site Location: Changchun, China<br>Masterplan Area: 724 k㎡<br>Program：Residential / Retail / Culture / Tourism</small>
+                    <br><br>As part of Changchun spatial framework - city in north, garden in south, mountain and water in the middle, the site could highlight digital industry with the filming industry character of the city, a recreational destination for the transformation of traditional industries. The plan focuses on the protection and restoration of the current mountain and forest ecology of the site, the systematic connection and protection of core ecological areas, the restoration of special ecology zone. By introducing cultural tourism industry, diverse recreational corridors and experience loops create a new ecological green heart in Changchun.
+                    </p></div>
+                </div>
+            </li>
+            <li  id="pf3">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/202103 Fuxian Lake/Headphoto.jpg"></img>
+                    <h2>Lake Township Visioning Plan</h2>
+                    <p>2020/07-2021/03 Southwest China</p>
+                    <div class = 'Details' hidden><p><small>Professional project @Sasaki<br>Team：Michael Grove, Ming-Jen Hsueh, Sejal Agrawal, Fan Yang, Shih-Hao Liao, Yixin Miao, Elangovan Govindan, Ponnapa Prakkamakul, Zixuan Tai, Boxiang Yu<br><br>Design Area: 1210,000 ㎡<br>Program：Tourism / Commercial / Residence<br>GFA：840,000 ㎡</small>
+                    <br><br>This Lake is a deep-water freshwater lake with largest water storage capacity, top water quality among the inland lakes in China. Our plan  prioritizes ecology by minimizing or eliminating the impact on lake water quality while utilizing the lake view. 
+                    <br><br>We kept most of the existing ravines as primary ecological corridors connecting the district from the mountains to the lakefront, also a linear lakefront wetland belt to collect and purify surface runoff coming from the ravines. A commercial - cultural corridor is placed in the center of the site, where theater, conference hall, forest retail street is located. On the lake front we have resort hotel and resort villas, as well as exhibition and water sports center, on mountainside we put smaller scale hotels closer to the forest, along with market oriented apartments and townhouses.
+                    </p></div>
+                </div>
+            </li>
+            <li  id="pf4">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/202109 Quang Ngai/Headphoto.jpg"></img>
+                    <h2>Quang Ngai Masterplan</h2>
+                    <p>2021/05-2021/09 Quang Ngai, Vietnam</p>
+                    <div class='Details' hidden><p><small>Professional project @Sasaki<br>Team：Romil Sheth, Elangovan Govindan, Fan Yang, Yixin Miao, Qiuying Sun, Ponnapa Prakkamakul, Hui Wang, Andrew Sell, Rafael Marengoni<br><br>Masterplan Area: 155 k㎡<br>Program：Resrot / Residential / Office / Industry<br>GFA: 85,000,000 ㎡</small>
+                    <br><br>Quang Ngai is one of the fastest developping cities in Vietnam, the city is proposing a new town to the north of the old city. By utilizing its approximity to harbor and railways, the new town will attract new industries as well as tourists to this area. 
+                    <br><br>The plan prioritizes ecology analysis, the open space structure is set based on preserving major portion of existing forests and farmland. The development clusters consists of one main beachfront city belt which will accommodate CBD, retail, resort, and three other clusters providing ecology living, education and research, light industry and high-end manufacturing industry.
+                    </p><h2>Massing Generation Using Grasshopper</h2>
+                    <p>Due to the large site area that require general massing modelling to show density and typology distribution, a Rhino Grasshopper plug-in called <a href = 'https://decodingspaces.de/'>Decoding Spaces</a> was introduced into this project in order to improve work flow and efficiency.
+                    <br><br>This plug-in provides various tools to control the shape of blocks and form of buildings. By taking an area boundary and a guiding street segment as input, a minor street network and blocks can be generated. Other parameters can be used to control the block width, setbacks, parcel width, building type, building width, FAR, etc. 
+                    </p><img width='100%' src='/images/202109 Quang Ngai/plugin.png'>
+                    <div class = 'caption'>Using Decoding Spaces in grasshopper</div>
+                    <img width='60%' src='/images/202109 Quang Ngai/form0.jpg'>
+                    <div class = 'caption'>Input geometry: area boundary and guiding street segment</div>
+                    <img width='60%' src='/images/202109 Quang Ngai/form1.jpg'>
+                    <div class = 'caption'>Single family house typology</div>
+                    <img width='60%' src='/images/202109 Quang Ngai/form2.jpg'>
+                    <div class = 'caption'>'Donut' typology</div>
+                    <img width='60%' src='/images/202109 Quang Ngai/form3.jpg'>
+                    <div class = 'caption'>Tower typology</div>
+                    <img width='60%' src='/images/202109 Quang Ngai/form4.jpg'>
+                    <div class = 'caption'>Vietnamese shophouse typology</div>
+                    <p>Combining the characters provided by this plug-in, a specific typology was developped for this project, as shown in the last picture above. The Vietnamese shophouse typology usually consists of two rows of townhouses with diverse width / height and first floor shops in a block, it was simulated in grasshopper by adjusting parcel and building parameters, as well as introducing a randomrized floor number module.
+                    </p></div>
+                </div>
+            </li>
+            <li  id="pf5">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201911 WMHO/Headphoto.jpg"></img>
+                    <h2>Walmart New Headquater Design</h2>
+                    <p>2018/11-2019/11 Bentonville, AR</p>
+                    <div class='Details' hidden><p><small>Professional project @Sasaki<br>Team：Martin Zogran, Hernan D. Scholosman, Ethan Lay-Sleeper, Shih Hao Liao, Fan Yang, Alykhan Mohamed<br><br>Design Area: 1210,000 ㎡<br>Program：Office Headquarter<br>GFA：330,000 ㎡</small>
+                    <br><br>Sasaki led the campus master planning process, engaging many diverse voices in the process. Bridging architecture, landscape design, transportation planning, and sustainability, the Sasaki urban design team created a flexible framework for Walmart’s new campus. The new home office will incorporate new standards for wellness in all aspects of its design, including hike and bike trails, walkable amenities, and new fitness and child care options.
+                    </p></div>
+                </div>
+            </li>
+            <li  id="pf6">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/202007 Xining/Headphoto.jpg"></img>
+                    <h2>Xining Downtown Urban Design</h2>
+                    <p>2020/04-2020/07 Xining, China</p>
+                    <div class='Details' hidden><p><small>Professional project @Sasaki<br>Team: Ming-Jen Hsueh, Elangovan Govindan, Binbin Ma, Fan Yang, Yixin Miao, Muhan Cui, Wenxin Li<br><br>Research Area: 4.8 k㎡<br>Design Area: 259,000 ㎡<br>Program: Retail / Office / Culture / Public Service</small>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="pf7">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/202103 Addis Ababa/Headphoto.jpg"></img>
+                    <h2>La Gare Mixed-Use Development</h2>
+                    <p>2019/09-2021/03 Addis Ababa, Ethiopia</p>
+                    <div class='Details' hidden><p><small>Professional project @Sasaki<br>Team: Romil Sheth, Alykhan Mohamed, Ruben Sannen, Fan Yang, Ponnapa Prakkamakul, Shannon Rafferty<br><br>Design Area: 316,000 ㎡<br>Program: Residential / Retail<br>GFA: 873,000 ㎡</small>
+                    <br><br>La Gare mixed-use development is located in central Addis Ababa, containing the historic site of La Gare Railway Station. As one of the largest integrated communities in Ethiopia, La Gare features more than 4,000 residences set in an area of over 360,000 sqm. The regeneration of this urban area will revitalize the city's economy and bring back the life hub in the memory of Addis Ababa citizens.
+                    </p></div>
+                </div>
+            </li>
+        </ul>
+
+        <!--竞赛作品组-->
+        <ul id="competition">
+            <li  id="cp1">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/202011 Chernobyl/Headphoto.jpg"></img>
+                    <h2>New Chernobyl: Towards A Clean Future</h2>
+                    <p>2020/11 Chernobyl, Ukraine</p>
+                    <div class='Details' hidden><p><small>Introduction Video</small></p>
+                    <div style='padding-bottom: 56.25%; position: relative'><iframe frameborder = '0' style = 'position: absolute; width: 100%; height: 100%' src='https://www.youtube.com/embed/t1rsPclplTc'></iframe></div>
+                    <h2>Step I Exclusion to Inclusion</h2>
+                    <p><img src = '/images/202011 Chernobyl/P1.jpg' width = '100%'></img>
+                    In order to revive the Chernobyl Area, we first look into the change of Exclusion Zone Boundary, the current boundary cover 2,600 sqkm of land, yet a large portion of it is not that severely polluted due to a large span of time has passed.
+                    <br><br>Based on data from Ukrainian Institute of Agricultural Radiology and ARPA Russia-Belarus, a radiation level analysis shows that a large area is lower than 0.24 microSv/h, which equals to 2 mSv annualy. This number equals to average natural background radiation level in UK, thus the Exclusion Zone boundary can be reduced to cover only 1000 sqkm land.
+                    </p><h2>Step II Accessibility</h2>
+                    <p><img src = '/images/202011 Chernobyl/P2.jpg' width = '80%'></img>
+                    Proposing a HSR could significantly improve the accessibility to the site. Phase one Kyiv-Chernihiv HSR is 210km long, can run 250km/h train that connects the two major cities in less than one hour. Five major stops are proposed, with one station located in the former exclusion zone. It only takes 30 min from kyiv to arrive at Chernobyl by train, more people will be attracted to this area. The later phases could extent the rail to connect West Europe and Russia, functioning as a spine.
+                    </p><h2>Step III New Communities</h2>
+                    <p><img src = '/images/202011 Chernobyl/P3.jpg' width = '100%'></img>
+                    We propose to establish a new community next to the Chernobyl HSR Station, as an anchor and exemplary district for the redevelopment of former EZ. The new community, also the HSR station, is only 2.5 km from Chernobyl old town, serving both the new community and technicians in old town area. 
+                    <br><br>The new community consists of several urban clusters that sits in harmony with the nature. Green corridors surrounding each cluster, with leisure programs located in. Each cluster can hold different programs, mixed-use cluster for youth and new comers, residential community for families, health institution for everyone's healthy life in the city.
+                    <br><br><img src = '/images/202011 Chernobyl/P4.jpg' width = '100%'></img>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="cp2">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201804 Mumbai/Headphoto.jpg"></img>
+                    <h2>A Gentle Trespasser of Koliwada</h2>
+                    <p>2018/04 Mumbai, India</p>
+                    <div class = 'Details' hidden><p>When the land of Koliwada is inevitably facing redevelopment, is there a possible way that we can make this ‘trespasser’, the new project, as gentle as possible? We propose three protocols that the original residents may ask the developer to enforce, in order to achieve a balanced solution for both new comers to the site, as well as the original residents there.
+                    <img src="/images/201804 Mumbai/P1.jpg" width = '100%'></img>
+                    <img src="/images/201804 Mumbai/P2.jpg" width = '100%'></img>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="cp3">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201604 Vertical Farming/Headphoto.jpg"></img>
+                    <h2>耕·云 Arable Air: Vertical Farming Facility Design</h2>
+                    <p>2016/04 Zhengzhou, China</p>
+                    <div class='Details' hidden><p><small>Honorable Mention, 2016 Vertical Farming Design Competition<br>Instructor: Deng Yuanyuan<br>Collaborators: Wang Kaisheng, Xu Chenxu, Wang Meng</small>
+                    </p><h2>Design Concept</h2>
+                    <p>The chinese character 耕 (farming), which is formed by 耒 (plow) on the left side and 井 (well) on the right side, has been connected tightly to the earth since its creation. Yet as the land, which the traditional farming pattern is based on, has been gradually taken up by sprawling modern cities, we’d like to explore the new meaning of farming. Vertical farm, which integrates agriculture and urban space, allows farming leaving earth and floating in air, thus creates new possibilities for farming.
+                    <img src="/images/201604 Vertical Farming/P1.jpg" width = '80%'></img>
+                    </p><h2>Form Generation</h2>
+                    <p><img src="/images/201604 Vertical Farming/P2.jpg" width = '80%'></img>
+                    This site locates in HangMei science and technology park in XinZheng, Henan Province. The existing buildings include an 11F office building, a 2F annexes building and ancillary commercial facilities in the field. The field which is adjacent to the ecological landscape axis in the center of the science and technology park has superior landscape condition and landmark potential.The construction of the vertical farm will make exploration and demonstration for the the development of urban agriculture in the city. 
+                    <img src="/images/201604 Vertical Farming/P3.jpg" width = '100%'></img>
+                    <img src="/images/201604 Vertical Farming/P4.jpg" width = '100%'></img>
+                    <img src="/images/201604 Vertical Farming/P5.jpg" width = '100%'></img>
+                    <img src="/images/201604 Vertical Farming/P6.jpg" width = '100%'></img>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="cp4">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201608 Narrator/Headphoto.jpg"></img>
+                    <h2>Narrator on the Fourth Dimension</h2>
+                    <p>2016/08 Kunshan, China</p>
+                    <div class = 'Details' hidden>
+                    <p><small>Design of Gui Youguang Memorial<br>UIA-HYP Cup 2016 Honorable Mention</small></p>
+                    <h2>About the Narrator</h2>
+                    <p><img src = '/images/201608 Narrator/P1.jpg' width = '45%'></img>
+                    Born in Kunshan, Gui Youguang was famous for literary talent in his early years. In Jiajing Year 19 (1540 AD), he passed the Provincial Exam but failed the Imperial Exam in the next year. So he moved to Anting River and started lecturing. Many students were attracted by his reputation. Yet in the following years, he suffered from both repeatedly failing the Imperial Exam and passing away of his loved ones.
+                    <br><br>However, these twists and turns of life inspired him in his creation. His proses have sincere feelings as well as distinctive style, which are widely praised as the representative of “Classical Faction”. Most of his famous essays were included in <em>Collection of Zhengchuan</em>.
+                    </p><h2>Design Concept</h2>
+                    <p><img src = '/images/201608 Narrator/P2.jpg' width = '45%'></img>
+                    Memorial is a kind of narrative to show the life experiences of the commemorated person. This design tries to follow the typical narrative pattern of the narrator to complete a narrative of the narrator’s life.  Visitors of the memorial may follow the life track of the writer through exhibits, as well as learn the narrate pattern of the writer through visit path and architecture space.
+                    <br><br>We take an article of the narrator as an example to analyze his pattern of extracting events from a pool of all accessible events and organizing their sequence, so as to form the regulations of generating spatial forms and visit paths of the memorial. 
+                    </p><h2>Site Analysis</h2>
+                    <p><img src = '/images/201608 Narrator/P3.jpg' width = '45%'></img>
+                    The site of Gui Youguang Memorial is in Zhenchuan Park of Kunshan, which is also Gui’s resting place. The park locates right between a city street and a river. It has a tranquil atmosphere and inherited the history and culture of Kunshan. So it is an ideal site for Gui’s Memorial. 
+                    <br><br>Yet the effect of the park failed to exert well. There are several facilities inside the park that functioned as a memorial of the historical figure but few people may come into the hidden and forgotten area to visit these facilities. Also, the access to waterfront area is not easy due to dense vegetation inside the park and winding paths that block the sight of visitors. 
+                    <img src = '/images/201608 Narrator/P4.jpg' width = '60%'></img>
+                    </p><h2>An Example of Narrative Pattern</h2>
+                    <p><img src = '/images/201608 Narrator/P5.jpg' width = '100%'></img>
+                    <img src = '/images/201608 Narrator/P6.jpg' width = '100%'></img>
+                    <small>Note:<br>[1] The Imperial Examinations were a civil service examination system in Imperial China to select candidates for the state bureaucracy. By passing the Provincial Exam, Candidates  got the chance of taking Imperial Examination in state capital.
+                    <br>[2] Ivory tablet was held by ancient officials when they meeting the emporer.</small>
+                    </p><h2>Narrative Pattern Analysis</h2>
+                    <p><img src = '/images/201608 Narrator/P7.jpg' width = '45%'></img>
+                    By analyzing The Xiangji Studio of Gui Youguang, it turns out that the narrative is not developed from a linear direction along the timeline, instead it is divergent but surrounds several objects: the past states of the objects are described and juxtaposed with current states. By manipulating time, the narrator allows readers to experience compressed and collaged time periods, thus highlighting the emotion. Following this pattern, we try to arrange the content of the memorial.
+                    </p><h2>Extracting Memorial Themes</h2>
+                    <p><img src = '/images/201608 Narrator/P8.jpg' width = '45%'></img>
+                    Based on the Chronicle of Gui Youguang, we put dozens of events that took place in Gui’s lifetime on the timeline and then try to find connections among them. We sort out 5 themes according to the relation of places/objects among those major events: the Hall of Imperial Examination, the loquat tree, the studio, the ivory tablet and the grave. The 5 exhibition halls are shaped according to the space feature of the places or the  scenes that the objects are used. These halls are the basic modules of the memorial.
+                    </p><h2>Form Generation</h2>
+                    <p><img src = '/images/201608 Narrator/P9.jpg' width = '100%'></img>
+                    <p><img src = '/images/201608 Narrator/P10.jpg' width = '100%'></img>
+                    <p><img src = '/images/201608 Narrator/P11.jpg' width = '80%'></img>
+                    After extracting the five objects that linked major events of the writer’s life, the themes of exhibition halls of the memorial are determined. The five exhibition halls are organized into the plan of the memorial with one hall on the ground (due to the grave is defined as immovable cultural relics) and four underground halls. The contents of these exhibition halls demonstrate mutiple aspects of the writer.
+                    <p><img src = '/images/201608 Narrator/P12.jpg' width = '100%'></img>
+                    </p><h2>Path Organization</h2>
+                    <p><img src = '/images/201608 Narrator/P13.jpg' width = '80%'></img>
+                    The visit sequence of each visitor that comes to the memorial is equivalent to his narrative sequence. The sequence shall not be  fixed in response to the  flexibility  of time dimension in narrative. Thus connectors are introduced into the memorial to provide visitors with a possibility of diversive paths. The connectors connect the underground and ground space. So visitors are able to back to the ground as soon as they finish the visit of one exhibition hall and choose their next object.
+                    <br><br>The insertion of connectors diversified the visit paths of the memorial. Visitors are able to determine the visit sequence of the 5 exhibition halls by using these connectors and thus form a narrative sequence of the 5 themes. Underground and on the ground, past and present is juxtaposed so that the memorial has become a narrative carrier which is able to shuttle on the 4th dimension. Each visitor constructs a narrative of the writer when he or she tries to find one’s own visit path.
+                    <br><img src = '/images/201608 Narrator/P14.jpg' width = '100%'></img>
+                    </p></div>
+                </div>
+            </li>
+        </ul>
+        
+        <!--学术作品组-->
+        <ul id="academic">
+            <li  id="ac1">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201706 Xuzhou Industry/Headphoto.jpg"></img>
+                    <h2>Compact-Oriented Spatial Structure Evaluation and Optimization</h2>
+                    <p>2016/08-2017/06 Xuzhou, China</p>
+                    <div class='Details' hidden ><p><small>Graduate Thesis, Master of Engineering in Urban Planning and Design<br>China University of Mining and Technology</small>
+                    <br><br>With the growing shortage of available land resources in China, compact-oriented development guided by the renewal of stock land in old industrial area is an inevitable choice to achieve sustainable development. Based on the comparison of existing urban spatial compactness evaluation methods, this paper constructs the evaluation system of spatial structure compactness of old industrial area with the specific requirements of the old industrial area renewal considered. 
+                    <br><br><img width='80%' src="/images/201706 Xuzhou Industry/research area.jpg">
+                    <img width='80%' src="/images/201706 Xuzhou Industry/index table.jpg">
+                    <br><br>The evaluation system selects several indicators from different levels to describe the spatial structure characteristics of the old industrial area and aims at optimizing its structure. The 90.8 sqkm research area is divided into 492 cells, each one has a size of 500x500m. 5 types of indexes in 3 categories are selected to describe the density, landuse, transportation of each cell. Datas are collected for each cell and calculated into the compactness index, as shown in the diagram below:
+                    <br><br><img width='80%' src="/images/201706 Xuzhou Industry/compactness index.jpg">
+                    <br><br>By using the coefficient of variation method, a comprehensive compactness index is calculated for each of the cells and is visualized in the interactive map below:
+                    </p><div style='padding-bottom: 56.25%; position: relative'><iframe src="/images/201706 Xuzhou Industry/Compactness Data.html" frameborder = '0' style = 'position: absolute; width: 100%; height: 100%' allow="autoplay"></iframe></div>
+                    <img width='80%' src="/images/201706 Xuzhou Industry/histogram.jpg">
+                    <p>Based on historical information, compactness in 1995 and 2005 is also calculated. The numerical distribution histogram of compactness in the study area in different years is shown on the diagram above. This thesis also looked into how the indexes in different categories is affecting the compactness, estimated slope and correlations of the indexes is shown below.
+                    <br><br><img width='80%' src="/images/201706 Xuzhou Industry/correlation.jpg">
+                    Then a neighborhood analysis is performed to identify those cells with most potential for redevelopment, as shown in the diagram below. Thus this thesis explores a way to describe and analysis the compactness character of urban blocks, as well as filtering blocks with great potential for the reference of urban redevelopment decisions.
+                    <img width='60%' src="/images/201706 Xuzhou Industry/neighborhood.jpg">
+                    <br><br><img width='100%' src="/images/201706 Xuzhou Industry/potential.jpg">
+                    <!--<br><br><small>Full thesis report (in Chinese):</small>
+                    <div style='padding-bottom: 56.25%; position: relative'><iframe src="https://drive.google.com/file/d/19DXgffe6ukx1mt7-eWFMSf5RksAXk11_/preview" frameborder = '0' style = 'position: absolute; width: 100%; height: 100%' allow="autoplay"></iframe></div>-->
+                </p></div>
+            </li>
+            <li  id="ac2">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201808 Glocalization/Headphoto.jpg"></img>
+                    <h2>Glocalization: Transforming Industrialized Villages</h2>
+                    <p>2017/05-2017/08 Changzhou, China</p>
+                    <div class='Details' hidden ><p><img width='60%' src='/images/201808 Glocalization/P1.jpg'></img>
+                    <br><br><small>UC Berkely, College of Environmental Design, EnvDes 253 Thesis Study
+                    <br><br>Project Committee<br>Marco Cenzatti, John Ellis, Morten Jensen</small>
+                    <br><br>When looking back at the unparalleled economic development process of China, the Yangtze River Delta Area is one of the places that has gone through the most radical changes on earth in the last decades. </p>
+                    <h2>The Land System and Sunan Model</h2>
+                    <p>The Sunan Model, a unique economic development model, featured as bottom-up industrialization in rural area, contributed to the urbanization and growth here. Yet the rapid development is breaking up the connection of those water towns and villages with their tradition. An erosion of global forces marginalized local assets.
+                    <img width='70%' src='/images/201808 Glocalization/P2.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P3.jpg'></img></p>
+                    <h2>Site Analysis</h2>
+                    <p>This project focuses on the issue of globalization VS localization. It aims at create a glocalization paradigm in the Chinese context through exploring different kinds of strategies and design solutions.
+                    <img width='100%' src='/images/201808 Glocalization/P4.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P5.jpg'></img></p>
+                    <h2>Design Strategies</h2>
+                    <p><img width='100%' src='/images/201808 Glocalization/P6.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P7.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P8.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P9.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P10.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P11.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P12.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P13.jpg'></img>
+                    <img width='100%' src='/images/201808 Glocalization/P14.jpg'></img>
+                    <br><br><small>Full thesis report:</small>
+                    <div style='padding-bottom: 56.25%; position: relative'><iframe src="https://drive.google.com/file/d/1a-eRg9cO_USsQw2bg3IWzjxftRxBJzky/preview" frameborder = '0' style = 'position: absolute; width: 100%; height: 100%' allow="autoplay"></iframe></div>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="ac3">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201712 Petaluma/Headphoto.jpg"></img>
+                    <h2>Petaluma River Regeneration</h2>
+                    <p>2017/08-2017/12 Petaluma, CA</p>
+                    <div class='Details' hidden ><p><small>UC Berkely, College of Environmental Design, ED 201<br><br>Instructor: Harrison Fraker, Christopher Calott, John Ellis<br>Team: Fan Yang, Radhika Haridas, Andrea Medina</small>
+                    <br><br><img width='100%' src='/images/201712 Petaluma/P1.jpg'></img>
+                    Petaluma is a city in North Bay, located 37 mi (60 km) north of San Francisco. Petaluma’s historical evolution is closely tied to development along the Petaluma River. 
+                    <br><br>The city’s downtown grew on the southwest bank of the Petaluma River. Later, commercial and industrial uses grew on the northeast riverbank. The river, coupled with the arrival of the railroad in the 1870s, transformed the city into a thriving center of agricultural commerce for the region. Petaluma has a well-preserved, historic city center which includes many buildings that survived the 1906 San Francisco earthquake.
+                    <br><br><img width='100%' src='/images/201712 Petaluma/MP.jpg'></img>
+                    <br><br></p><h2>Station Area: Re-Orientation</h2>
+                    <p>Reorient ensures that the River is the primary anchor of the City of Petaluma. It turns the buildings towards the River edge, rather than backwards, and tries to establish a connection between River banks. It helps to connect the various neighborhoods surrounding the River.   
+                    <br><br>The location of the SMART station adds the advantage of connecting Petaluma to the rest of the County. Further, the introduction of an anchor activity such as an educational institution will act as a driver of economic and demographic activity to Petaluma.
+                    <br><br><img width='100%' src='/images/201712 Petaluma/P2.jpg'></img>
+                    <img width='100%' src='/images/201712 Petaluma/P3.jpg'></img>
+                    <br><br></p><h2>Central Island: Reshaping</h2>
+                    <p>Reshape focusses on the natural landscape features in the City and tries to sculpt in ways that could be used to benefit the urban fabric with has a high flood risk. By using available land resources and cutting and filling them elsewhere to flood-proof other areas on site, Reshape ensures that the River is given space to grow.
+                    <br><br><img width='100%' src='/images/201712 Petaluma/P4.jpg'></img>
+                    </p><h2>Warehouse District: Re-Adaptation</h2>
+                    <p>Readapt looks at the existing warehouse district which is at threat of flooding, being at the lowest point on the topography. It focusses on treatment of the edge of the River at this location by introduction of various types of functions that act as flood barriers. Re-adapt also looks at how the downtown of the City could adapt, retrofit and absorb new programs into the existing fabric.
+                    <img width='80%' src='/images/201712 Petaluma/P5.jpg'></img>
+                    </p><h2>Marina Neighborhood: Re-Activate</h2>
+                    <p>Reactivate takes into account the existing under-utilized land, previously used as an industrial land and dock area. The land takes on the memory of its previous use and tries to add new connections between the North side neighborhoods and the south side neighborhood. The newly developed, primarily residential neighborhood will add a large housing stock to Petaluma and will itself be a self-sufficient neighborhood in terms of energy usage and waste treatment.
+                    <br><br><img width='100%' src='/images/201712 Petaluma/P6.jpg'></img>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="ac4">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201805 Production City/Headphoto.jpg"></img>
+                    <h2>The City of Massive Production</h2>
+                    <p>2018/03-2018/05</p>
+                    <div class='Details' hidden ><p><small>UC Berkely, College of Environmental Design, Arch 229</small>
+                    <br><br>This city is functioning as a world factory, it anonymously produce almost everything in our daily life. The city of massive production extends beyond itself and connects to the world through all kinds of flows. When the production become a fixed procedure, the flow of raw materials and final products can be regarded as fixed as well. The raw materials are collected and transported through conveyer belts to the factories, where they are put on assembly lines and manufactured into products. Then these final products are classified based on their function and sent to warehouses. 
+                    <br><br><img width='50%' src='/images/201805 Production City/P1.jpg'></img>
+                    <br><br>This massive production process is separated from consumers but affects the residents in the city in all kinds of ways. The residents order online and they can get the products distributed to them quickly and conveniently. With the thought of showing their personality by getting commodities like clothes, furniture, flooring, etc., with different styles, they actually get the outcome of massive production and they categorized themselves as well. The massive production turned into a massive classification, in which the characteristics of a city, the identity of a community and the personality of a person is generated. 
+                    <br><br><img width='100%' src='/images/201805 Production City/P2+P3.jpg'></img>
+                    <br><br>The fixed process and repetitive massive production is generated due to its economic advantages, yet is restricting the creativity and originality of craftsmanship, also the expression of identity. It becomes a collection, production, categorization and distribution of identity.
+                    <br><br><img width='100%' src='/images/201805 Production City/P4+P5.jpg'></img>
+                    </p></div>
+                </div>
+            </li>
+            <li  id="ac5">
+                <div class="Content">
+                    <img class="Headphoto" src="/images/201805 Old Oak/Headphoto.jpg"></img>
+                    <h2>Old Oak Common: London 2030</h2>
+                    <p>2018/03-2018/05</p>
+                    <div class='Details' hidden ><p><small>UC Berkely, College of Environmental Design, CP 248<br><br>Instructor: John Ellis<br>Team: Fan Yang, Soraya El Alami, Brendan Hurley, Sabrina Hussein, Dennis Mukuba, Kenchane Gunawardena</small>
+                    <br><br><img width='40%' src='/images/201805 Old Oak/P1.jpg'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P2.gif'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P3.gif'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P4.gif'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P5.jpg'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P6.gif'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P7.gif'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P8.gif'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P9.jpg'></img>
+                    <br><br><img width='100%' src='/images/201805 Old Oak/P10.gif'></img>
+                    </p></div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+    <!--载入zoomooz插件-->
+    <script type="text/javascript" src="../src/jquery.min.js.download"></script>
+	<script type="text/javascript" src="../src/jquery.zoomooz.min.js.download"></script>
+
+    <!--设置zoom in zoom out-->
+	<script type="text/javascript">
+        //JQuery
+        var filter = document.getElementById('logoFilter');    //grab logo and filters
+        $(document).ready(function() {
+            $('#container').click(function(evt) {
+                evt.stopPropagation();
+                $(this).zoomTo({duration:500, targetsize:1.0});      //zoom back to full page 1.0
+                filter.style.visibility = 'visible';            //hide logo and filter
+            });
+            $('li').click(function(evt) {                    //zoom when click on li or content
+                evt.stopPropagation();
+                $(this).zoomTo({duration:500, targetsize:0.013});    //zoom in level 0.013          
+                filter.style.visibility = 'hidden';        //show logo and filter
+            });
+        });
+    </script>
+
+    
+    <!--更新筛选按钮状态-->
+    <script type="text/javascript">
+        var btns = document.querySelectorAll('.Btn');
+        //var btns = btnContainer.getElementsByClassName("Btn");
+
+        function SwitchNodes(name){
+            var element = document.getElementById(name);
+            var hidden = element.getAttribute("hidden");
+            if(hidden){
+                element.removeAttribute("hidden");
+            }else{
+                element.setAttribute("hidden", "true");
+            }
+        }
+
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function(){
+                var name = ProjectID(this);
+                if(this.classList.contains("BtnOff")){         //check if filter is clicked or not
+                    FilterOn(this);                              
+                    if(name === 'aboutme'){                   //if turn on 'about me', hide other projects
+                        for(var j = 0; j<3; j++){
+                            FilterOff(btns[j]);
+                        }
+                    }
+                }else{
+                    FilterOff(this);
+                    if(name === 'aboutme'){                   //if turn off 'about me', show other projects
+                        for(var j = 0; j<3; j++){
+                            FilterOn(btns[j]);
+                        }
+                    }
+                }
+            });
+        }
+        //close about me nodes on loading
+        FilterOff(btns[3]);
+
+        //switch button styles
+        function FilterOff(element){
+            if(element.classList.contains('Btn')){
+                element.classList.remove("Btn");
+                element.classList.add("BtnOff");
+                var id = ProjectID(element);
+                SwitchNodes(id);
+            }
+
+        }
+        function FilterOn(element){
+            if(element.classList.contains('BtnOff')){
+                element.classList.remove("BtnOff");
+                element.classList.add("Btn");
+                var id = ProjectID(element);
+                SwitchNodes(id);
+            }
+        }
+
+        //change filter button name to project group id
+        function ProjectID(element){
+            var name = element.textContent;
+            name = name.toLowerCase();
+            name = name.replace(" ","");
+            return name;
+        }
+    </script>
+
+    <!--悬浮窗扩展功能-->
+    <script>
+        var contents = document.getElementsByClassName('Content');
+        for(i=0;i<contents.length;i++){
+            var expBtn = document.createElement('img');
+            expBtn.src = '/images/ExpandBtn.svg';
+
+            var cloBtn = document.createElement('img');
+            cloBtn.src = '/images/CloseBtn.svg';
+
+            expBtn.classList.add('ExpandBtn');
+            cloBtn.classList.add('ExpandBtn');
+            cloBtn.setAttribute('hidden','true');
+
+            contents[i].appendChild(expBtn);
+            contents[i].appendChild(cloBtn);
+
+            expBtn.addEventListener('click', function(){
+                this.parentNode.classList.remove('Content');
+                this.parentNode.classList.add('ContentExpand');
+                this.setAttribute('hidden','true');
+                this.previousElementSibling.removeAttribute('hidden');  //show details div
+                this.nextSibling.removeAttribute('hidden');  //show close button
+            }, false);
+            cloBtn.addEventListener('click', function(){
+                this.parentNode.classList.remove('ContentExpand');
+                this.parentNode.classList.add('Content');
+                this.setAttribute('hidden','true');
+                this.previousSibling.previousElementSibling.setAttribute('hidden', 'true'); //hide details div
+                this.previousSibling.removeAttribute('hidden');  //show expand button
+            }, false);
+
+            //add scroll distance
+            contents[i].addEventListener('scroll', function(e){ScrollPos(e);}, false);
+        }
+
+        function ScrollPos(e){
+            var pos = e.target.scrollTop;
+            var startPos = 0.3 / 100 * document.documentElement.clientWidth; //change 0.3 based on button top value
+            e.target.lastChild.style.top = startPos + pos + 'px'; //update close button position to top
+        }
+    </script>
+
+</body>
+</html>
